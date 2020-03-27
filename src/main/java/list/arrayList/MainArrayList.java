@@ -1,8 +1,9 @@
-package main.java;
+package main.java.list.arrayList;
 
-import java.util.ArrayList;
-
-public class Main {
+/**
+ * 源码解读
+ */
+public class MainArrayList {
 
     public static void main(String[] args) {
         add();
