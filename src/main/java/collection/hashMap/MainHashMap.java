@@ -1,4 +1,4 @@
-package main.java.map.hashMap;
+package main.java.collection.hashMap;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

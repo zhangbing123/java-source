@@ -1,4 +1,4 @@
-package main.java.list.arrayList;
+package main.java.collection.arrayList;
 
 /**
  * 源码解读

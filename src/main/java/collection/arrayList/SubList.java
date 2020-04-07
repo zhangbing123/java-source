@@ -23,7 +23,7 @@
  *
  */
 
-package main.java.list.arrayList;
+package main.java.collection.arrayList;
 
 import java.util.*;
 

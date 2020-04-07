@@ -17,28 +17,30 @@ public class ReentrantLockTest {
         //创建非公平锁
 //        ReentrantLock reentrantLock = new ReentrantLock();
 
-        Thread thread1 = new Thread(() -> {
-            reentrantLock.lock();
-            while (count < 50) {
-                count++;
-                System.out.println("线程1" + reentrantLock.getQueueLength());
-            }
-            reentrantLock.unlock();
-        });
+        Thread thread1 = new Thread(() -> run(reentrantLock));
         thread1.setName("张兵测试线程1");
         thread1.start();
-//
-//        Thread.sleep(3000);
-//
-//        Thread thread2 = new Thread(() -> {
-//            reentrantLock.lock();
-//            System.out.println(reentrantLock.getQueueLength());
-//            count++;
-//            reentrantLock.unlock();
-//        });
-//        thread2.setName("张兵测试线程2");
-//        thread2.start();
 
 
+        Thread thread2 = new Thread(() -> run(reentrantLock));
+        thread2.setName("张兵测试线程2");
+        thread2.start();
+
+        Thread thread3 = new Thread(() -> run(reentrantLock));
+        thread3.setName("张兵测试线程3");
+        thread3.start();
+
+
+    }
+
+    private static void run(ReentrantLock reentrantLock) {
+        reentrantLock.lock();
+        System.out.println(Thread.currentThread().getName() + "获取到锁");
+        while (count < 5) {
+            count++;
+            System.out.println(Thread.currentThread() + ":" + count);
+        }
+        reentrantLock.unlock();
+        count = 0;
     }
 }

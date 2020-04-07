@@ -23,7 +23,7 @@
  *
  */
 
-package main.java.list.arrayList;
+package main.java.collection.arrayList;
 
 import java.util.*;
 
@@ -484,8 +484,8 @@ public abstract class AbstractList<E> extends AbstractCollection<E> implements L
      */
     public List<E> subList(int fromIndex, int toIndex) {
         return (this instanceof RandomAccess ?
-                new RandomAccessSubList<>(this, fromIndex, toIndex) :
-                new SubList<>(this, fromIndex, toIndex));
+                new main.java.collection.RandomAccessSubList<>(this, fromIndex, toIndex) :
+                new main.java.collection.SubList<>(this, fromIndex, toIndex));
     }
 
     // Comparison and hashing
