@@ -1,7 +1,5 @@
 package main.java.juc.aqs;
 
-import sun.misc.Unsafe;
-
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
