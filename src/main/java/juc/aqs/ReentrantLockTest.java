@@ -11,24 +11,11 @@ public class ReentrantLockTest {
 
     private static int count;
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         //创建公平锁
         ReentrantLock reentrantLock = new ReentrantLock(true);
         //创建非公平锁
 //        ReentrantLock reentrantLock = new ReentrantLock();
-
-//        reentrantLock.lock();
-//        System.out.println("第一次加锁");
-//        reentrantLock.lock();
-//        System.out.println("第二次加锁");
-//        reentrantLock.lock();
-//        System.out.println("第三次加锁");
-//        reentrantLock.unlock();
-//        System.out.println("第一次释放锁");
-//        reentrantLock.unlock();
-//        System.out.println("第二次释放锁");
-//        reentrantLock.unlock();
-//        System.out.println("第三次释放锁");
 
         Thread thread1 = new Thread(() -> run(reentrantLock));
         thread1.setName("张兵测试线程1");
