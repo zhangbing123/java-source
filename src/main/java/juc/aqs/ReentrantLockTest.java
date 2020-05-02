@@ -11,7 +11,7 @@ public class ReentrantLockTest {
 
     private static int count;
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         //创建公平锁
         ReentrantLock reentrantLock = new ReentrantLock(true);
         //创建非公平锁

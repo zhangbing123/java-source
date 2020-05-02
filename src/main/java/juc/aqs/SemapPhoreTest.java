@@ -13,7 +13,7 @@ public class SemapPhoreTest {
      * @param args
      */
     public static void main(String[] args) {
-        Semaphore semaphore = new Semaphore(3);
+        Semaphore semaphore = new Semaphore(3,true);
 
         for (int i = 0; i < 5; i++) {
             new Thread(new TestSemapPhore(semaphore)).start();
