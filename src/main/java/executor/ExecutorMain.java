@@ -1,7 +1,6 @@
 package main.java.executor;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * @description:
@@ -11,6 +10,8 @@ import java.util.concurrent.Executors;
 public class ExecutorMain {
 
     public static void main(String[] args) {
+//        Thread thread = new Thread();
+//        thread.start();
 
 //        Thread thread = new Thread(new Runnable() {
 //            @Override
@@ -19,11 +20,12 @@ public class ExecutorMain {
 //            }
 //        },"test");
 //        thread.start();
-        ExecutorService service = Executors.newFixedThreadPool(3);
-        service.execute(() -> System.out.println("1："+Thread.currentThread().getName()));
-        service.execute(() -> System.out.println("2："+Thread.currentThread().getName()));
-        service.execute(() -> System.out.println("3："+Thread.currentThread().getName()));
-        service.execute(() -> System.out.println("4："+Thread.currentThread().getName()));
-        service.shutdown();
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 5, 0, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
+
+        for (int i = 0; i < 15; i++) {
+            int finalI = i;
+            threadPoolExecutor.execute(() -> System.out.println(finalI + ":" + Thread.currentThread().getName()));
+        }
+        threadPoolExecutor.shutdown();
     }
 }
