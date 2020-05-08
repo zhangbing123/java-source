@@ -1,6 +1,4 @@
-package main.java.juc.aqs;
-
-import java.util.concurrent.locks.ReentrantLock;
+package main.java.juc.aqs.reentrantlock;
 
 /**
  * @description: ReentrantLocks锁
@@ -13,7 +11,7 @@ public class ReentrantLockTest {
 
     public static void main(String[] args) {
         //创建公平锁
-        ReentrantLock reentrantLock = new ReentrantLock(true);
+        ZBReentrantLock reentrantLock = new ZBReentrantLock(true);
         //创建非公平锁
 //        ReentrantLock reentrantLock = new ReentrantLock();
 
@@ -33,7 +31,7 @@ public class ReentrantLockTest {
 
     }
 
-    private static void run(ReentrantLock reentrantLock) {
+    private static void run(ZBReentrantLock reentrantLock) {
         reentrantLock.lock();
         System.out.println(Thread.currentThread().getName() + "获取到锁");
         while (count < 5) {
