@@ -146,15 +146,15 @@ public class ZbThreadPoolExecutor implements ZbExecutorService {
 
         int i = ctl.get();
 
-        if (i < corePoolSize) {
-            if (addWorker(task, true))
+        if (i < corePoolSize) {//工作线程数未达到核心线程数
+            if (addWorker(task, true))//创建核心线程并且执行任务
                 return;
-        } else if (!isShutdown() && workQueue.offer(task)) {
+        } else if (!isShutdown() && workQueue.offer(task)) {//工作线程数已经达到核心线程数，线程池未关闭，任务添加到队列，由空余的核心线程取出并执行
 
             return;
 
-        } else if (ctl.get() >= maxPoolSize || !addWorker(task, false)) {
-            defaultHandler.rejectedExecution(task, this);
+        } else if (ctl.get() >= maxPoolSize || !addWorker(task, false)) {//队列满了，未达到最大线程数，则新增非核心线程执行任务，
+            defaultHandler.rejectedExecution(task, this);//工作线程数达到了最大线程数  则执行拒绝策略
         }
 
     }
@@ -168,8 +168,8 @@ public class ZbThreadPoolExecutor implements ZbExecutorService {
         return null;
     }
 
-    private boolean addWorker(Runnable task, boolean newStart) {
-        if (newStart)
+    private boolean addWorker(Runnable task, boolean core) {
+        if (core)
             ctl.incrementAndGet();
 
         boolean workerAdded = false;
@@ -183,7 +183,7 @@ public class ZbThreadPoolExecutor implements ZbExecutorService {
                 mainLock.lock();//加锁
 
                 try {
-                    if (!isShutdown()) {//当前线程池为关闭
+                    if (!isShutdown()) {//当前线程池未关闭
                         if (thread.isAlive())//当前线程正在运行  无法重新启动
                             throw new IllegalStateException("this thread is running");
                         workers.add(worker);
@@ -199,7 +199,7 @@ public class ZbThreadPoolExecutor implements ZbExecutorService {
                 }
             }
         } finally {
-            if (!newStart) {
+            if (!core) {
                 Thread thread = worker.thread;
                 if (!thread.isInterrupted() && worker.tryLock()) {
                     try {
@@ -241,7 +241,7 @@ public class ZbThreadPoolExecutor implements ZbExecutorService {
                 worker.lock();
                 if (isShutdown() && !thread.isInterrupted()) {
                     //线程池已关闭，线程未中断 需要中断线程池
-                    thread.isInterrupted();
+                    thread.interrupt();
                 }
                 try {
                     task.run();
