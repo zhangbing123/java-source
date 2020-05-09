@@ -92,13 +92,13 @@ public class ZBArrayBlockingQueue<E> extends ZBAbstractQueue<E>
 
     /** Condition for waiting takes */
     /**
-     * 获取元素时的锁
+     * 获取元素时的条件
      */
     private final Condition notEmpty;
 
     /** Condition for waiting puts */
     /**
-     * 添加元素的锁
+     * 添加元素时的条件
      */
     private final Condition notFull;
 
