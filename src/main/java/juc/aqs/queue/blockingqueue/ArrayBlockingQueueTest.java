@@ -1,7 +1,6 @@
-package main.java.juc.aqs.blockingqueue;
+package main.java.juc.aqs.queue.blockingqueue;
 
 import java.util.Scanner;
-import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * @description: 阻塞队列
@@ -13,7 +12,7 @@ public class ArrayBlockingQueueTest {
     public static void main(String[] args) {
 
         //基于数组实现的（数组不可扩容）
-        ArrayBlockingQueue arrayBlockingQueue = new ArrayBlockingQueue(1);
+        ZBArrayBlockingQueue arrayBlockingQueue = new ZBArrayBlockingQueue(1);
 
         new Thread(() -> {
 

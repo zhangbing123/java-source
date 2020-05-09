@@ -95,70 +95,17 @@ public abstract class ZBAbstractQueuedSynchronizer
         static final int PROPAGATE = -3;
 
         /**
-         * Status field, taking on only the values:
-         * SIGNAL:     The successor of this node is (or will soon be)
-         * blocked (via park), so the current node must
-         * unpark its successor when it releases or
-         * cancels. To avoid races, acquire methods must
-         * first indicate they need a signal,
-         * then retry the atomic acquire, and then,
-         * on failure, block.
-         * CANCELLED:  This node is cancelled due to timeout or interrupt.
-         * Nodes never leave this state. In particular,
-         * a thread with cancelled node never again blocks.
-         * CONDITION:  This node is currently on a condition queue.
-         * It will not be used as a sync queue node
-         * until transferred, at which time the status
-         * will be set to 0. (Use of this value here has
-         * nothing to do with the other uses of the
-         * field, but simplifies mechanics.)
-         * PROPAGATE:  A releaseShared should be propagated to other
-         * nodes. This is set (for head node only) in
-         * doReleaseShared to ensure propagation
-         * continues, even if other operations have
-         * since intervened.
-         * 0:          None of the above
-         * <p>
-         * The values are arranged numerically to simplify use.
-         * Non-negative values mean that a node doesn't need to
-         * signal. So, most code doesn't need to check for particular
-         * values, just for sign.
-         * <p>
-         * The field is initialized to 0 for normal sync nodes, and
-         * CONDITION for condition nodes.  It is modified using CAS
-         * (or when possible, unconditional volatile writes).
-         * <p>
          * 表示线程被封装成node节点前的等待状态 初始为0
          * 节点没有特别标记的状态就为0，如初始节点。
          */
         volatile int waitStatus;
 
         /**
-         * Link to predecessor node that current node/thread relies on
-         * for checking waitStatus. Assigned during enqueuing, and nulled
-         * out (for sake of GC) only upon dequeuing.  Also, upon
-         * cancellation of a predecessor, we short-circuit while
-         * finding a non-cancelled one, which will always exist
-         * because the head node is never cancelled: A node becomes
-         * head only as a result of successful acquire. A
-         * cancelled thread never succeeds in acquiring, and a thread only
-         * cancels itself, not any other node.
          * 前一个节点  构成双向链表的属性之一
          */
         volatile Node prev;
 
         /**
-         * Link to the successor node that the current node/thread
-         * unparks upon release. Assigned during enqueuing, adjusted
-         * when bypassing cancelled predecessors, and nulled out (for
-         * sake of GC) when dequeued.  The enq operation does not
-         * assign next field of a predecessor until after attachment,
-         * so seeing a null next field does not necessarily mean that
-         * node is at end of queue. However, if a next field appears
-         * to be null, we can scan prev's from the tail to
-         * double-check.  The next field of cancelled nodes is set to
-         * point to the node itself instead of null, to make life
-         * easier for isOnSyncQueue.
          * 后一个节点 构成双向链表的属性之一
          */
         volatile Node next;
@@ -318,7 +265,7 @@ public abstract class ZBAbstractQueuedSynchronizer
      * @return the new node
      */
     private Node addWaiter(Node mode) {
-        //创建一个封装当前线程的独占模式节点，初始等待状态为0
+        //创建一个封装当前线程的独占模式/共享模式节点，初始等待状态为0
         Node node = new Node(Thread.currentThread(), mode);
         //获取队列尾节点
         Node pred = tail;
@@ -385,30 +332,25 @@ public abstract class ZBAbstractQueuedSynchronizer
      * to calling unparkSuccessor of head if it needs signal.)
      */
     private void doReleaseShared() {
-        /*
-         * Ensure that a release propagates, even if there are other
-         * in-progress acquires/releases.  This proceeds in the usual
-         * way of trying to unparkSuccessor of head if it needs
-         * signal. But if it does not, status is set to PROPAGATE to
-         * ensure that upon release, propagation continues.
-         * Additionally, we must loop in case a new node is added
-         * while we are doing this. Also, unlike other uses of
-         * unparkSuccessor, we need to know if CAS to reset status
-         * fails, if so rechecking.
-         */
+
         for (; ; ) {
             Node h = head;
-            if (h != null && h != tail) {
+            if (h != null && h != tail) {//表示队列不为空
                 int ws = h.waitStatus;
-                if (ws == Node.SIGNAL) {
-                    if (!compareAndSetWaitStatus(h, Node.SIGNAL, 0))
-                        continue;            // loop to recheck cases
+                if (ws == Node.SIGNAL) {//头节点的状态为SIGNAL(-1) 表示有后续节点需要被唤醒
+                    if (!compareAndSetWaitStatus(h, Node.SIGNAL, 0))//把头节点的等待状态设置为0初始状态  防止其他线程重复去唤醒队列中的线程
+                        continue;            // loop to recheck cases 设置失败 继续下一轮循环
+                    /**
+                     * 唤醒头节点的下一个节点  此节点在doAcquireSharedInterruptibly()方法中阻塞着呢
+                     * 唤醒节点后，线程获取到锁成功，会把获取锁的节点 置为头节点  此时的头节点已经改变了
+                     * 注意：如果获取锁的节点的后续节点存在  则此时的头节点的状态又是 SIGNAL(-1)状态 ，可以唤醒下一个节点
+                     */
                     unparkSuccessor(h);
                 } else if (ws == 0 &&
                         !compareAndSetWaitStatus(h, 0, Node.PROPAGATE))
                     continue;                // loop on failed CAS
             }
-            if (h == head)                   // loop if head changed
+            if (h == head)                 // loop if head changed
                 break;
         }
     }
@@ -536,6 +478,9 @@ public abstract class ZBAbstractQueuedSynchronizer
             // 在我们前面的源码中，都没有看到有设置waitStatus的，所以每个新的node入队时，waitStatu都是0
             // 正常情况下，前驱节点是之前的 tail，那么它的 waitStatus 应该是 0
             // 用CAS将前驱节点的waitStatus设置为Node.SIGNAL(也就是-1)
+            /**
+             * 节点的等待状态 是由后驱节点设置的
+             */
             compareAndSetWaitStatus(pred, ws, Node.SIGNAL);
         }
 
@@ -725,22 +670,28 @@ public abstract class ZBAbstractQueuedSynchronizer
      */
     private void doAcquireSharedInterruptibly(int arg)
             throws InterruptedException {
+        //作为一个共享模式的节点入队
         final Node node = addWaiter(Node.SHARED);
+
         boolean failed = true;
         try {
             for (; ; ) {
+                //获取当前节点的前驱节点
                 final Node p = node.predecessor();
-                if (p == head) {
+                if (p == head) {//如果前驱节点为头节点  说明当前节点为队列中第一个线程节点
+                    //再次尝试获取共享资源
                     int r = tryAcquireShared(arg);
                     if (r >= 0) {
+                        //共享资源获取成功,把当前节点置为空节点 并且指向头结点
                         setHeadAndPropagate(node, r);
                         p.next = null; // help GC
                         failed = false;
                         return;
                     }
                 }
+                //判断是否需要阻塞当前线程
                 if (shouldParkAfterFailedAcquire(p, node) &&
-                        parkAndCheckInterrupt())
+                        parkAndCheckInterrupt())//阻塞当前线程
                     throw new InterruptedException();
             }
         } finally {
@@ -1047,9 +998,10 @@ public abstract class ZBAbstractQueuedSynchronizer
      */
     public final void acquireSharedInterruptibly(int arg)
             throws InterruptedException {
-        if (Thread.interrupted())
+        if (Thread.interrupted())//线程中断
             throw new InterruptedException();
-        if (tryAcquireShared(arg) < 0)
+        if (tryAcquireShared(arg) < 0)//返回的值 <0 则获取共享资源失败
+            //入队阻塞 等待其他线程释放共享资源
             doAcquireSharedInterruptibly(arg);
     }
 
@@ -1087,7 +1039,7 @@ public abstract class ZBAbstractQueuedSynchronizer
      * @return the value returned from {@link #tryReleaseShared}
      */
     public final boolean releaseShared(int arg) {
-        if (tryReleaseShared(arg)) {
+        if (tryReleaseShared(arg)) {//释放共享资源成功
             doReleaseShared();
             return true;
         }
@@ -1611,13 +1563,16 @@ public abstract class ZBAbstractQueuedSynchronizer
          * @return its new wait node
          */
         private Node addConditionWaiter() {
+            //最后节点
             Node t = lastWaiter;
             // If lastWaiter is cancelled, clean out.
             if (t != null && t.waitStatus != Node.CONDITION) {
                 unlinkCancelledWaiters();
                 t = lastWaiter;
             }
+            //创建一个条件队列模式的节点
             Node node = new Node(Thread.currentThread(), Node.CONDITION);
+            //把当前线程追加到队列尾部
             if (t == null)
                 firstWaiter = node;
             else
@@ -1803,10 +1758,10 @@ public abstract class ZBAbstractQueuedSynchronizer
             if (Thread.interrupted())
                 throw new InterruptedException();
             Node node = addConditionWaiter();
-            int savedState = fullyRelease(node);
+            int savedState = fullyRelease(node);//当前线程释放锁
             int interruptMode = 0;
             while (!isOnSyncQueue(node)) {
-                LockSupport.park(this);
+                LockSupport.park(this);//阻塞在这 等待被notFull/notEmpty唤醒
                 if ((interruptMode = checkInterruptWhileWaiting(node)) != 0)
                     break;
             }
