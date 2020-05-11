@@ -1,6 +1,7 @@
 package main.java.collection.hashMap;
 
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
@@ -29,6 +30,8 @@ public class MainHashMap {
             hashMap.put(i, 100);
         }
 
+        Hashtable<Object, Object> objectObjectHashtable = new Hashtable<>();
+        objectObjectHashtable.put("123",1233);
 
         LinkedHashMap<Object, Object> linkedHashMap = new LinkedHashMap<>();
         linkedHashMap.put("1223", "312312");
