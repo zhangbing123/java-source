@@ -1,6 +1,8 @@
 package main.java.collection.arrayList;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Vector;
 
 /**
  * 源码解读
@@ -20,5 +22,8 @@ public class MainArrayList {
          */
         list.add(1);
         System.out.println(10+(10>>1));
+
+        Vector<Integer> objects = new Vector<>();
+        objects.add(1);
     }
 }

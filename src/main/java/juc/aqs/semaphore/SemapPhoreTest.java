@@ -1,6 +1,4 @@
-package main.java.juc.aqs;
-
-import java.util.concurrent.Semaphore;
+package main.java.juc.aqs.semaphore;
 
 public class SemapPhoreTest {
 
@@ -13,7 +11,7 @@ public class SemapPhoreTest {
      * @param args
      */
     public static void main(String[] args) {
-        Semaphore semaphore = new Semaphore(3,true);
+        ZBSemaphore semaphore = new ZBSemaphore(3, true);
 
         for (int i = 0; i < 5; i++) {
             new Thread(new TestSemapPhore(semaphore)).start();
@@ -21,9 +19,9 @@ public class SemapPhoreTest {
     }
 
     public static class TestSemapPhore implements Runnable {
-        private Semaphore semaphore;
+        private ZBSemaphore semaphore;
 
-        public TestSemapPhore(Semaphore semaphore) {
+        public TestSemapPhore(ZBSemaphore semaphore) {
             this.semaphore = semaphore;
 
         }
