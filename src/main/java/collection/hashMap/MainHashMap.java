@@ -63,6 +63,8 @@ public class MainHashMap {
         for (int i = 0; i < 1000030; i++) {
             int number = random.nextInt(62);
             hashMap.put(i, number);
+            hashMap.get(i);
+
         }
 
         Hashtable<Object, Object> objectObjectHashtable = new Hashtable<>();
@@ -75,7 +77,7 @@ public class MainHashMap {
         ConcurrentHashMap<Object, Object> concurrentHashMap = new ConcurrentHashMap<>();
         concurrentHashMap.put("1", "423");
 
-        System.out.println(1 << 30);
+        System.out.println(10 >>> 1);
         System.out.println(Integer.MAX_VALUE);
     }
 }
