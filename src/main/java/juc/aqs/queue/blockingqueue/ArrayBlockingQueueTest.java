@@ -12,7 +12,7 @@ public class ArrayBlockingQueueTest {
     public static void main(String[] args) {
 
         //基于数组实现的（数组不可扩容）
-        ZBArrayBlockingQueue arrayBlockingQueue = new ZBArrayBlockingQueue(1);
+        ZBArrayBlockingQueue arrayBlockingQueue = new ZBArrayBlockingQueue(1, false);
 
         new Thread(() -> {
 
@@ -33,7 +33,6 @@ public class ArrayBlockingQueueTest {
 
         new Thread(() -> {
             while (true) {
-                System.out.println(123);
                 try {
                     String take = (String) arrayBlockingQueue.take();
 
@@ -50,6 +49,7 @@ public class ArrayBlockingQueueTest {
 
             }
         }, "线程2").start();
+
 
     }
 }
