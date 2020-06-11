@@ -18,25 +18,6 @@ public class MyClassLoader extends ClassLoader {
         this.classPath = classPath;
     }
 
-    private byte[] loadByte(String fullPathname) {
-        String path = fullPathname.replaceAll("\\.", "/");
-        byte[] bytes = null;
-        try {
-            FileInputStream fileInputStream = new FileInputStream(classPath + "/" + path + ".class");
-            int available = fileInputStream.available();
-            bytes = new byte[available];
-            fileInputStream.read(bytes);
-            fileInputStream.close();
-        } catch (FileNotFoundException e) {
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return bytes;
-    }
-
 
     /**
      * 重写loadClass 打破双亲委派机制
@@ -65,7 +46,6 @@ public class MyClassLoader extends ClassLoader {
                 // to find the class.
                 long t1 = System.nanoTime();
 
-
                 // this is the defining class loader; record the stats
                 sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
                 sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
@@ -85,7 +65,28 @@ public class MyClassLoader extends ClassLoader {
 
     }
 
+    private byte[] loadByte(String fullPathname) {
+        String path = fullPathname.replaceAll("\\.", "/");
+        byte[] bytes = null;
+        try {
+            FileInputStream fileInputStream = new FileInputStream(classPath + "/" + path + ".class");
+            int available = fileInputStream.available();
+            bytes = new byte[available];
+            fileInputStream.read(bytes);
+            fileInputStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return bytes;
+    }
+
+
     public static void main(String[] args) {
+        //创建一个自定义加载器 传入自定义类路径
         MyClassLoader myClassLoader = new MyClassLoader("D:/workspace/test/");
         try {
             Class<?> aClass = myClassLoader.loadClass("main.jvm.classLoad.User", false);
