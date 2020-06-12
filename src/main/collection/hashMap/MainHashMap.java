@@ -1,9 +1,6 @@
 package main.collection.hashMap;
 
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.LinkedHashMap;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -57,36 +54,50 @@ public class MainHashMap {
      */
     public static void main(String[] args) {
 
-        Random random = new Random();
-        String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        HashMap<Object, String> hashMap = new HashMap<>();
-        for (int i = 0; i < 1000030; i++) {
-//            int number = random.nextInt(62);
-//            hashMap.put(i, number);
-//            hashMap.get(i);
+//        Random random = new Random();
+//        String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+//        HashMap<Object, String> hashMap = new HashMap<>();
+//        for (int i = 0; i < 1000030; i++) {
+////            int number = random.nextInt(62);
+////            hashMap.put(i, number);
+////            hashMap.get(i);
+//
+////            System.out.println(hash(i));
+//
+//        }
+//        //会产生hash冲突的key
+//        hashMap.put("Aa","Aa");
+//        hashMap.put("BB","BB");
+//
+////        System.out.println(hash("Aa"));
+////        System.out.println(hash("BB"));
+//
+//        Hashtable<Object, Object> objectObjectHashtable = new Hashtable<>();
+//        objectObjectHashtable.put("123", 1233);
+//
+//        LinkedHashMap<Object, Object> linkedHashMap = new LinkedHashMap<>();
+//        linkedHashMap.put("1223", "312312");
+//        linkedHashMap.get("1223");
+//
+//        ConcurrentHashMap<Object, Object> concurrentHashMap = new ConcurrentHashMap<>();
+//        concurrentHashMap.put("1", "423");
+//
+//        System.out.println(10 >>> 1);
+//        System.out.println(Integer.MAX_VALUE);
 
-//            System.out.println(hash(i));
+        int [] nums = {2,5,5,11};
+        int[] ints = twoSum(nums, 10);
+        System.out.println(ints);
+    }
 
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer> map = new HashMap();
+        for(int i=0;i<nums.length;i++){
+            map.put(nums[i],i);
         }
-        //会产生hash冲突的key
-        hashMap.put("Aa","Aa");
-        hashMap.put("BB","BB");
+        Set<Map.Entry<Integer, Integer>> entries = map.entrySet();
 
-//        System.out.println(hash("Aa"));
-//        System.out.println(hash("BB"));
-
-        Hashtable<Object, Object> objectObjectHashtable = new Hashtable<>();
-        objectObjectHashtable.put("123", 1233);
-
-        LinkedHashMap<Object, Object> linkedHashMap = new LinkedHashMap<>();
-        linkedHashMap.put("1223", "312312");
-        linkedHashMap.get("1223");
-
-        ConcurrentHashMap<Object, Object> concurrentHashMap = new ConcurrentHashMap<>();
-        concurrentHashMap.put("1", "423");
-
-        System.out.println(10 >>> 1);
-        System.out.println(Integer.MAX_VALUE);
+        return null;
     }
 
     static final int hash(Object key) {
