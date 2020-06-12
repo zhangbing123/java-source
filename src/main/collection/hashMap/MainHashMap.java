@@ -59,13 +59,21 @@ public class MainHashMap {
 
         Random random = new Random();
         String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        HashMap<Object, Integer> hashMap = new HashMap<>(30);
+        HashMap<Object, String> hashMap = new HashMap<>();
         for (int i = 0; i < 1000030; i++) {
-            int number = random.nextInt(62);
-            hashMap.put(i, number);
-            hashMap.get(i);
+//            int number = random.nextInt(62);
+//            hashMap.put(i, number);
+//            hashMap.get(i);
+
+//            System.out.println(hash(i));
 
         }
+        //会产生hash冲突的key
+        hashMap.put("Aa","Aa");
+        hashMap.put("BB","BB");
+
+//        System.out.println(hash("Aa"));
+//        System.out.println(hash("BB"));
 
         Hashtable<Object, Object> objectObjectHashtable = new Hashtable<>();
         objectObjectHashtable.put("123", 1233);
@@ -80,4 +88,10 @@ public class MainHashMap {
         System.out.println(10 >>> 1);
         System.out.println(Integer.MAX_VALUE);
     }
+
+    static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+    }
+
 }
