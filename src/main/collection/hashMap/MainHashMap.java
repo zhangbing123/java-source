@@ -79,8 +79,8 @@ public class MainHashMap {
 //        linkedHashMap.put("1223", "312312");
 //        linkedHashMap.get("1223");
 //
-//        ConcurrentHashMap<Object, Object> concurrentHashMap = new ConcurrentHashMap<>();
-//        concurrentHashMap.put("1", "423");
+        ConcurrentHashMap<Object, Object> concurrentHashMap = new ConcurrentHashMap<>();
+        concurrentHashMap.put("1", "423");
 //
 //        System.out.println(10 >>> 1);
 //        System.out.println(Integer.MAX_VALUE);
@@ -95,7 +95,12 @@ public class MainHashMap {
         for(int i=0;i<nums.length;i++){
             map.put(nums[i],i);
         }
-        Set<Map.Entry<Integer, Integer>> entries = map.entrySet();
+//        Set<Map.Entry<Integer, Integer>> entries = map.entrySet();
+        Set<Map.Entry<Integer,Integer>> entrys = map.entrySet();
+        for (Map.Entry<Integer,Integer> entry : entrys){
+            entry.getKey();
+            entry.getValue();
+        }
 
         return null;
     }

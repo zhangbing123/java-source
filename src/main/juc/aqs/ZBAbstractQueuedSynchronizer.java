@@ -958,7 +958,7 @@ public abstract class ZBAbstractQueuedSynchronizer
     public final boolean release(int arg) {
         if (tryRelease(arg)) {// 尝试释放锁，成功进入下面逻辑
             Node h = head;
-            if (h != null && h.waitStatus != 0)
+            if (h != null && h.waitStatus != 0)//如果头节点后面还有线程节点等待的话，则头结点的waitStatus被后一个节点设置为SIGNAL状态
                 //唤醒队列中第一个线程节点的线程
                 unparkSuccessor(h);
             return true;
