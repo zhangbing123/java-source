@@ -5,10 +5,13 @@ package com.jdk.entity;
  * @author: zhangbing
  * @create: 2020-04-07 16:33
  **/
+
 public class Student {
 
     private String name;
     private int age;
+
+    public Student(){}
 
     public Student(String name, int age) {
         this.name = name;
@@ -21,6 +24,14 @@ public class Student {
 
     public int getAge() {
         return age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public synchronized void say() {
