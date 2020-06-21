@@ -10,11 +10,13 @@ import java.util.Vector;
 public class MainArrayList {
 
     public static void main(String[] args) {
+        System.out.println(6 >> 1);//除以2
+        System.out.println(6 << 2);//乘以2
         add();
     }
 
-    private static void add(){
-        ArrayList<Integer> list = new ArrayList<>();
+    private static void add() {
+        ArrayList<Integer> list = new ArrayList<>(10);
         /**
          * 默认数组为空数组
          * 1.添加第一个元素时，会默认数组容量为10
@@ -22,8 +24,9 @@ public class MainArrayList {
          */
         list.add(1);
         list.add(2);
+        list.add(2,3);
         list.get(0);
-        System.out.println(10+(10>>1));
+        System.out.println("数组中保存的数量："+list.size());
 
         Vector<Integer> objects = new Vector<>();
         objects.add(1);
