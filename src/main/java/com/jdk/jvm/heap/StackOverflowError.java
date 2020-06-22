@@ -7,7 +7,7 @@ public class StackOverflowError {
 
     static int count=0;
 
-    //JVM设置‐Xss160k(默认1M) 栈内存配置为128k
+    //JVM设置‐Xss160k(默认1M) 栈内存配置为160k
     public static void redo(){
         count++;
 

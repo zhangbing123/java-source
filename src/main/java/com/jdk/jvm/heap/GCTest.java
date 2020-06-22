@@ -13,7 +13,7 @@ public class GCTest {
 
     //配置 -XX:+PrintGCDetails  打印Gc的详细信息
     public static void main(String[] args) {
-        //创建一个bute的数组  大概占用60MB
+        //创建一个bute的数组  大概占用70MB
         byte [] allocate1 = new byte[70000*1024];
         /**
          * 结果：
@@ -29,9 +29,9 @@ public class GCTest {
          */
 
         /**
-         * 配置 -Xmn100 年轻代大小为100MB 则eden占80MB  from区占10MB to区占10MB
+         * 配置 -Xmn100m 年轻代大小为100MB 则eden占80MB  from区占10MB to区占10MB
          */
-//        byte[] allocate2 = new byte[10000 * 1024]; //占用大约20MB  此时eden区的内存大小不够了 需要发生一次GC 然后移动到 from区  from区不够用  移动到老年代
+        byte[] allocate2 = new byte[10000 * 1024]; //占用大约10MB  此时eden区的内存大小不够了 需要发生一次GC 然后移动到 from区  from区不够用  移动到老年代
         /**
          * 结果：
          * 发生了一次GC

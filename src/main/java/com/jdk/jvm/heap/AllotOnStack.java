@@ -12,15 +12,16 @@ public class AllotOnStack {
     /**
      * 代码调用了1亿此的alloc方法  假设在对上分配内存
      * 调用1亿次  产生1亿个Student对象  假设一个对象8B大小 总大小为：（8*1亿）/1000/1024 = 781MB 大概1GB 如果堆内存小于此值 则必然触发GC
-     *
+     * 配置:-Xms15m -Xmx15m -XX:+DoEscapeAnalysis -XX:+PrintGC  -XX:+EliminateAllocations
+     * <p>
      * jvm堆内存配置 -Xms15m -Xmx15m
-     *
+     * <p>
      * 如下配置不会发生大量的GC 几乎不会发生GC 开启逃逸分析  开启标量替换
      * -XX:+DoEscapeAnalysis(开启逃逸分析) -XX:+PrintGC  -XX:+EliminateAllocations(开启标量替换)
-     *
+     * <p>
      * 如下配置会发生大量GC 不开启逃逸分析  开启标量替换（开启也没用 因为没有开启逃逸分析 标量替换是在开启逃逸分析情况下生效）
      * -XX:-DoEscapeAnalysis(不开启逃逸分析) -XX:+PrintGC  -XX:+EliminateAllocations(开启标量替换)
-     *
+     * <p>
      * 如下配置会发声大量GC 开启逃逸分析  不开启标量替换
      * -XX:+DoEscapeAnalysis(开启逃逸分析) -XX:+PrintGC  -XX:-EliminateAllocations(开启标量替换)
      *
@@ -36,7 +37,7 @@ public class AllotOnStack {
 
         long l1 = System.currentTimeMillis();
 
-        System.out.println(l1-l);
+        System.out.println("耗时：" + (l1 - l) + "ms");
 
         /**
          * 结论：栈上分配内存 依赖逃逸分析和标量替换

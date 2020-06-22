@@ -1,4 +1,4 @@
-package com.jdk.collection.arrayList.customerImp;
+package com.jdk.collection.list.customerArrayListImp;
 
 import java.util.Arrays;
 

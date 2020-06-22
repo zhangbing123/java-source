@@ -13,12 +13,14 @@ package com.jdk.jvm.heap;
 public class BigObjectTest {
 
     /**
+     * -XX:+PrintGCDetails -XX:PretenureSizeThreshold=1000000 -XX:+UseSerialGC
      * -XX:PretenureSizeThreshold=1000000(单位字节) 配置指定大对象的大小  1000kb 约为1MB大小
      * 次参数 只有在使用Serial和ParNew两个垃圾收集器时才有用
      * 所以还需要配置
      * -XX:+UseSerialGC
      *
-     * 配置 -XX:+PrintDCDetails 查看GC详细信息
+     * 配置 -XX:+PrintGCDetails 查看GC详细信息
+     *
      * @param args
      */
     public static void main(String[] args) {
