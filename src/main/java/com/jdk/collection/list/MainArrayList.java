@@ -1,7 +1,8 @@
 package com.jdk.collection.list;
 
-import java.util.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
 import java.util.Vector;
 
 /**
@@ -13,6 +14,7 @@ public class MainArrayList {
         System.out.println(6 >> 1);//除以2
         System.out.println(6 << 2);//乘以2
         add();
+
     }
 
     private static void add() {
@@ -24,9 +26,9 @@ public class MainArrayList {
          */
         list.add(1);
         list.add(2);
-        list.add(2,3);
+        list.add(2, 3);
         list.get(0);
-        System.out.println("数组中保存的数量："+list.size());
+        System.out.println("数组中保存的数量：" + list.size());
 
         Vector<Integer> objects = new Vector<>();
         objects.add(1);

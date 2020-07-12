@@ -20,6 +20,11 @@ public class Math {
 
     public static void main(String[] args) {
         Math math = new Math();
-        math.compute();
+        /**
+         * 运行这段代码cpu飙升
+         */
+        while (true){
+            math.compute();
+        }
     }
 }
