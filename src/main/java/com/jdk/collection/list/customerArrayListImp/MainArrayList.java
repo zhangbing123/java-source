@@ -1,4 +1,4 @@
-package com.jdk.collection.list;
+package com.jdk.collection.list.customerArrayListImp;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
