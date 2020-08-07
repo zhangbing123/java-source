@@ -23,6 +23,11 @@ public class Math {
     public static void main(String[] args) {
         System.out.println(initDate);
         Math math = new Math();
-        math.compute();
+        /**
+         * 运行这段代码cpu飙升
+         */
+        while (true){
+            math.compute();
+        }
     }
 }
