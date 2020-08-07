@@ -1,15 +1,13 @@
 package com.jdk.executor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * @description: 子线程循环 10 次，接着主线程循环 100 次，接着又回到子线程循环 10 次，接着再回到主线程又循环 100 次，如此循环50次，试写出代码
+ * @description: 主子线程交替执行
+ * 子线程循环 10 次，接着主线程循环 100 次，接着又回到子线程循环 10 次，接着再回到主线程又循环 100 次，如此循环50次，试写出代码。
  * @author: zhangbing
- * @create: 2020-05-13 14:22
+ * @create: 2020-08-06 14:44
  **/
-public class ThreadMain {
-    public final List<Integer> list = new ArrayList<>();
+public class MainSubThreadAlternateExecution {
+
 
     public static void main(String[] args) {
         SubThread subThread = new SubThread();
@@ -19,6 +17,7 @@ public class ThreadMain {
                 subThread.sub();
             }
         }).start();
+
 
         for (int i = 0; i < 50; i++) {
             subThread.main();
@@ -65,5 +64,4 @@ public class ThreadMain {
             this.notify();
         }
     }
-
 }
