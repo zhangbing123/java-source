@@ -1,6 +1,8 @@
 package com.jdk.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @description:
@@ -11,7 +13,13 @@ public class CountdownLatchTest {
 
     public static void main(String[] args) throws InterruptedException {
 
-        CountDownLatch countDownLatch = new CountDownLatch(3);
+        CountDownLatch countDownLatch = new CountDownLatch(3);//set state的值为3
+
+        countDownLatch.countDown();//每个线程调用此方法  state-1 知道state被减为0  唤醒阻塞队列中的线程
+        countDownLatch.await();//state>0 调用此方法的线程阻塞，直到被调用countDown方法的线程唤醒
+        countDownLatch.await(1, TimeUnit.SECONDS);
+
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(2);
 
         Thread thread1 = new Thread(new MyTask("线程1",null), "线程1");
 
@@ -30,7 +38,7 @@ public class CountdownLatchTest {
 
     static class MyTask implements Runnable{
 
-        String threadName;
+        String threadName = "";
         Thread thread;
 
         public MyTask(String threadName,Thread thread) {

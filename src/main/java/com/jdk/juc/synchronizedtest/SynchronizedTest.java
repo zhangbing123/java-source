@@ -13,10 +13,12 @@ public class SynchronizedTest {
 
 
         Student student = new Student("张三", 24);
-//
-//        new Thread(() -> student.say(),"线程1").start();
-//        new Thread(() -> student.testSynchronized(),"线程2").start();
-//        new Thread(() -> student.testNotSynchronized(),"线程3").start();
+
+        new Thread(() -> student.say(),"线程1").start();
+        new Thread(() -> Student.testStaic(),"线程2").start();
+        new Thread(() -> student.testStaic(),"线程3").start();
+        new Thread(() -> student.testSynchronized(),"线程5").start();
+        new Thread(() -> student.testNotSynchronized(),"线程6").start();
 
 //        new Thread(() -> {
 //            Student student = new Student("张三", 24);
@@ -28,23 +30,23 @@ public class SynchronizedTest {
 //            student.say();
 //        }).start();
 //
-        Person personA = new Person("张三", 20);
-
-
-        for (int i = 1; i <= 5; i++) {
-            new Thread(() -> {
-                //访问静态方法
-                Person.staticMethod();
-            }, "线程" + i).start();
-        }
-
-        for (int i = 1; i <= 5; i++) {
-            new Thread(() -> {
-                //访问person实例的同步方法  此时锁住的是personA实例对象，
-                // 此时如果再有其他线程访问personA的同步方法 是获取不到锁的
-                personA.instanceMethod();
-            }, "线程" + i).start();
-        }
+//        Person personA = new Person("张三", 20);
+//
+//
+//        for (int i = 1; i <= 5; i++) {
+//            new Thread(() -> {
+//                //访问静态方法
+//                Person.staticMethod();
+//            }, "线程" + i).start();
+//        }
+//
+//        for (int i = 1; i <= 5; i++) {
+//            new Thread(() -> {
+//                //访问person实例的同步方法  此时锁住的是personA实例对象，
+//                // 此时如果再有其他线程访问personA的同步方法 是获取不到锁的
+//                personA.instanceMethod();
+//            }, "线程" + i).start();
+//        }
 
 //        for (int i = 1; i <= 2; i++) {
 //            new Thread(() -> {

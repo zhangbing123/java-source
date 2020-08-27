@@ -11,7 +11,8 @@ public class Student {
     private String name;
     private int age;
 
-    public Student(){}
+    public Student() {
+    }
 
     public Student(String name, int age) {
         this.name = name;
@@ -44,11 +45,22 @@ public class Student {
         System.out.println("sleep 之后执行...");
     }
 
-    public void testSynchronized() {
-        System.out.println(Thread.currentThread().getName()+"可以进入当前对象的非synchronized方法");
+    public void testNotSynchronized() {
+        System.out.println(Thread.currentThread().getName() + "可以进入当前对象的非synchronized方法");
     }
 
-    public synchronized void testNotSynchronized(){
-        System.out.println(Thread.currentThread().getName()+"只有等待上一个进入另外synchronized方法的线程执行完毕后才能执行synchronized方法");
+    public synchronized void testSynchronized() {
+        System.out.println(Thread.currentThread().getName() + "只有等待上一个进入另外synchronized方法的线程执行完毕后才能执行synchronized方法");
+    }
+
+    public synchronized static void testStaic() {
+        System.out.println("线程：" + Thread.currentThread().getName() + "访问静态方法成功");
+
+        try {
+            Thread.currentThread().sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("线程：" + Thread.currentThread().getName() + "退出静态方法成功");
     }
 }

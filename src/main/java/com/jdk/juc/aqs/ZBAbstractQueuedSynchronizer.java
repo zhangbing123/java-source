@@ -1159,7 +1159,7 @@ public abstract class ZBAbstractQueuedSynchronizer
      * is not the first queued thread.  Used only as a heuristic in
      * ReentrantReadWriteLock.
      */
-    final boolean apparentlyFirstQueuedIsExclusive() {
+    protected final boolean apparentlyFirstQueuedIsExclusive() {
         Node h, s;
         return (h = head) != null &&
                 (s = h.next) != null &&
@@ -1336,7 +1336,7 @@ public abstract class ZBAbstractQueuedSynchronizer
      * @param node the node
      * @return true if is reacquiring
      */
-    final boolean isOnSyncQueue(Node node) {
+    final boolean isOnSyncQueue(Node node) {  //判断节点是否存在同步队列中
         if (node.waitStatus == Node.CONDITION || node.prev == null)
             return false;
         if (node.next != null) // If has successor, it must be on queue
@@ -1626,7 +1626,7 @@ public abstract class ZBAbstractQueuedSynchronizer
          * without requiring many re-traversals during cancellation
          * storms.
          */
-        private void unlinkCancelledWaiters() {
+        private void unlinkCancelledWaiters() {//把一些无效的节点从条件队列中踢出去
             Node t = firstWaiter;
             Node trail = null;
             while (t != null) {
@@ -1757,14 +1757,16 @@ public abstract class ZBAbstractQueuedSynchronizer
         public final void await() throws InterruptedException {
             if (Thread.interrupted())
                 throw new InterruptedException();
-            Node node = addConditionWaiter();
+
+            Node node = addConditionWaiter();//入队 进入条件队列
             int savedState = fullyRelease(node);//当前线程释放锁
             int interruptMode = 0;
-            while (!isOnSyncQueue(node)) {
+            while (!isOnSyncQueue(node)) {//节点不在同步队列
                 LockSupport.park(this);//阻塞在这 等待被notFull/notEmpty唤醒
                 if ((interruptMode = checkInterruptWhileWaiting(node)) != 0)
                     break;
             }
+
             if (acquireQueued(node, savedState) && interruptMode != THROW_IE)
                 interruptMode = REINTERRUPT;
             if (node.nextWaiter != null) // clean up if cancelled
