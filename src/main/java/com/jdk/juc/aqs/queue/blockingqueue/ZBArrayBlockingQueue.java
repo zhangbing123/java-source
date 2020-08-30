@@ -146,10 +146,10 @@ public class ZBArrayBlockingQueue<E> extends ZBAbstractQueue<E>
         // assert items[putIndex] == null;
         final Object[] items = this.items;
         items[putIndex] = x;
-        if (++putIndex == items.length)
+        if (++putIndex == items.length)//添加完当前元素后 队列满了
             putIndex = 0;
         count++;
-        notEmpty.signal();
+        notEmpty.signal();//唤醒不为空阻塞队列中的线程  消费线程
     }
 
     /**
@@ -332,6 +332,7 @@ public class ZBArrayBlockingQueue<E> extends ZBAbstractQueue<E>
         checkNotNull(e);
 
         final ZBReentrantLock lock = this.lock;
+        Thread.currentThread().sleep(10);
         lock.lockInterruptibly();//加锁 避免多个线程同时向队列中添加元素
         try {
             while (count == items.length)//队列已满

@@ -13,7 +13,6 @@ public class ArrayBlockingQueueTest {
 
         //基于数组实现的（数组不可扩容）
         ZBArrayBlockingQueue arrayBlockingQueue = new ZBArrayBlockingQueue(1, false);
-
         new Thread(() -> {
 
             Scanner sc = new Scanner(System.in);
