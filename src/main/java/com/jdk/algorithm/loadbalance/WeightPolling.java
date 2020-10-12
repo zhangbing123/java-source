@@ -31,7 +31,7 @@ public class WeightPolling {
 
         synchronized (appServers) {
 
-            if (appServers.size() <= 0) {//初始化服务列表
+            if (appServers.isEmpty()) {//初始化服务列表
                 initServerList();
             }
             AppServer server = getServerByMaxWeight();
