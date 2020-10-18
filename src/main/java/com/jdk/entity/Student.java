@@ -38,7 +38,7 @@ public class Student {
     public synchronized void say() {
         System.out.println(name + " say hello");
         try {
-            Thread.currentThread().sleep(5000);
+            Thread.currentThread().sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -62,5 +62,9 @@ public class Student {
             e.printStackTrace();
         }
         System.out.println("线程：" + Thread.currentThread().getName() + "退出静态方法成功");
+    }
+
+    private void testPrivate() {
+        System.out.println("对象的private方法被成功调用");
     }
 }
