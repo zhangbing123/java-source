@@ -1,14 +1,19 @@
 package com.jdk.collection.list.customerLinkedListImp;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.function.Consumer;
+
 /**
 
-* @Description:    自定义列表实现
+* @Description:    自定义LinkedList实现
 
 * @Author:         zhangbing
 
 * @CreateDate:     2020/7/12 4:56 PM
 
 */
-public class LinkedListImp {
+public class LinkedListImp<T> implements Iterable<T> {
 
     private Node head;//头节点
     private Node tail;//尾节点
@@ -17,15 +22,26 @@ public class LinkedListImp {
     public LinkedListImp() {
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return null;
+    }
+
+    @Override
+    public void forEach(Consumer<? super T> action) {
+
+    }
+
+
     /**
      * 链表节点对象
      */
-    class Node {
-        private Object data;//链表节点数据
+    class Node<T> {
+        private T data;//链表节点数据
         private Node pre;//前一个节点
         private Node next;//后一个节点
 
-        public Node(Object data, Node pre, Node next) {
+        public Node(T data, Node pre, Node next) {
             this.data = data;
             this.pre = pre;
             this.next = next;
@@ -202,11 +218,16 @@ public class LinkedListImp {
         linkedListImp.set(linkedListImp.getSize(), 9);
         linkedListImp.set(linkedListImp.getSize() - 1, 10);
 
+
+
         Object o1 = linkedListImp.get(0);
         Object o2 = linkedListImp.get(2);
         Object o3 = linkedListImp.get(linkedListImp.getSize());
         Object o4 = linkedListImp.get(linkedListImp.getSize() - 1);
-        System.out.println(linkedListImp);
+        System.out.println(o1);
+        System.out.println(o2);
+        System.out.println(o3);
+        System.out.println(o4);
 
     }
 }
