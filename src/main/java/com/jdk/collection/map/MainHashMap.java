@@ -20,7 +20,8 @@ public class MainHashMap {
      * 测试目的：理解HashMap发生resize扩容的时候对于链表的优化处理：
      * * 初始化一个长度为8的HashMap，因此threshold为6，所以当添加第7个数据的时候会发生扩容；
      * * Map的Key为Integer，因为整数型的hash等于自身；
-     * * 由于hashMap是根据hash &（n - 1）来确定key所在的数组下标位置的，因此根据公式 m（m >= 1）* capacity + hash碰撞的数组索引下标index，可以拿到一组发生hash碰撞的数据；
+     * * 由于hashMap是根据hash &（n - 1）来确定key所在的数组下标位置的，因此根据公式 m（m >= 1）* capacity + hash碰撞的数组索引下标index，
+     *   可以拿到一组发生hash碰撞的数据；
      * * 例如本例子capacity = 8， index = 7，数据为：15，23，31，39，47，55，63；
      * * 有兴趣的读者，可以自己动手过后选择一组不同的数据样本进行测试。
      * * 根据hash &（n - 1）， n = 8 二进制1000 扩容后 n = 16 二进制10000， 当8的时候由后3位决定位置，16由后4位。
@@ -59,10 +60,11 @@ public class MainHashMap {
         Random random = new Random();
         String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         HashMap<Object, String> hashMap = new HashMap<>();
-        for (int i = 0; i < 1000030; i++) {
+        for (int i = 0; i < 100; i++) {
             int number = random.nextInt(62);
             hashMap.put(i, String.valueOf(number));
             hashMap.get(i);
+            hashMap.size();
 
             System.out.println(hash(i));
 
