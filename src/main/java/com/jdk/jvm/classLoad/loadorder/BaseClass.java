@@ -1,4 +1,4 @@
-package com.jdk.jvm.classLoad;
+package com.jdk.jvm.classLoad.loadorder;
 
 /**
  * @description: 基类

@@ -1,4 +1,6 @@
-package com.jdk.jvm.classLoad;
+package com.jdk.jvm.classLoad.loadorder;
+
+import com.jdk.jvm.classLoad.loadorder.DeriveClass;
 
 /**
  * @description: 测试类初始化的顺序

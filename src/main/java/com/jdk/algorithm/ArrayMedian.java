@@ -9,7 +9,7 @@ public class ArrayMedian {
 
     public static void main(String[] args) {
 
-        int[] nums1 = new int[]{1,3};
+        int[] nums1 = new int[]{1, 3};
         int[] nums2 = new int[]{2};
 
         double v = calMedian(nums1, nums2);
@@ -35,13 +35,13 @@ public class ArrayMedian {
             while (count < (len1 + len2)) {
 
                 if (point1 == len1) {
-                    while (point2 < len2){
+                    while (point2 < len2) {
                         nums[count++] = nums2[point2++];
                     }
                     break;
                 }
                 if (point2 == len2) {
-                    while (point1 < len1){
+                    while (point1 < len1) {
                         nums[count++] = nums1[point1++];
                     }
                     break;
@@ -73,6 +73,24 @@ public class ArrayMedian {
             }
         }
         return 0;
+
+    }
+
+
+    public int max(int[] nums) {
+
+        int max = 0;
+
+        int index = 0;
+
+        int length = nums.length;
+        for (int i = 0; i < length; i++) {  //时间复杂度O(n)
+            if (nums[i] > max) {
+                max = nums[i];
+                index = i;
+            }
+        }
+        return index;
 
     }
 }

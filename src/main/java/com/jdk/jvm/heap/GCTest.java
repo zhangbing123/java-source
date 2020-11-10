@@ -13,8 +13,8 @@ public class GCTest {
 
     //配置 -XX:+PrintGCDetails  打印Gc的详细信息
     public static void main(String[] args) {
-        //创建一个bute的数组  大概占用70MB
-        byte [] allocate1 = new byte[70000*1024];
+        //创建一个bute的数组  大概占用60MB
+        byte [] allocate1 = new byte[60000*1024];
         /**
          * 结果：
          * Heap
