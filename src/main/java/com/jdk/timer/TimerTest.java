@@ -43,7 +43,7 @@ public class TimerTest {
 
         new Thread(() -> {
             Timer timer = new Timer("定时线程",false);
-            String time4 = "2020-08-26 10:11:12";
+            String time4 = "2020-12-16 13:39:12";
             Date date4 = DateUtil.parseDate(time4);
             System.out.println("触发事件为：" + time4);
             timer.schedule(new RemindTask(timer), date4);

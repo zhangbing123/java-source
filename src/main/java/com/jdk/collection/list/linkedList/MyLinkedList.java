@@ -1,25 +1,20 @@
-package com.jdk.collection.list.customerLinkedListImp;
+package com.jdk.collection.list.linkedList;
 
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.function.Consumer;
 
 /**
-
-* @Description:    自定义LinkedList实现
-
-* @Author:         zhangbing
-
-* @CreateDate:     2020/7/12 4:56 PM
-
-*/
-public class LinkedListImp<T> implements Iterable<T> {
+ * @Description: 自定义LinkedList实现
+ * @Author: zhangbing
+ * @CreateDate: 2020/7/12 4:56 PM
+ */
+public class MyLinkedList<T> implements Iterable<T> {
 
     private Node head;//头节点
     private Node tail;//尾节点
     private int size;//存储数据的量
 
-    public LinkedListImp() {
+    public MyLinkedList() {
     }
 
     @Override
@@ -48,7 +43,7 @@ public class LinkedListImp<T> implements Iterable<T> {
         }
     }
 
-    public boolean add(Object o) {
+    public boolean add(T o) {
 
         if (head == null) {//链表为空
             Node node = new Node(o, null, null);
@@ -65,7 +60,7 @@ public class LinkedListImp<T> implements Iterable<T> {
 
     }
 
-    public void add(int index, Object o) {
+    public void add(int index, T o) {
 
         if (!checkIndex(index)) {
             throw new RuntimeException("下标越界");
@@ -168,13 +163,13 @@ public class LinkedListImp<T> implements Iterable<T> {
         return old;
     }
 
-    public Object get(int index) {
+    public T get(int index) {
 
         if (!checkIndex(index)) {
             throw new RuntimeException("下标越界");
         }
 
-        return find(index).data;
+        return (T) find(index).data;
     }
 
     private Node find(int index) {
@@ -195,35 +190,35 @@ public class LinkedListImp<T> implements Iterable<T> {
         return currentNode;
     }
 
-    public int getSize(){
+    public int getSize() {
         return size;
     }
 
 
     /**
      * test
+     *
      * @param args
      */
     public static void main(String[] args) {
-        LinkedListImp linkedListImp = new LinkedListImp();
-        linkedListImp.add(1);
-        linkedListImp.add(2);
-        linkedListImp.add(3);
-        linkedListImp.add(4);
-        linkedListImp.add(0, 5);
-        linkedListImp.add(3, 7);
-        linkedListImp.add(linkedListImp.getSize(), 6);
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList();
+        myLinkedList.add(1);
+        myLinkedList.add(2);
+        myLinkedList.add(3);
+        myLinkedList.add(4);
+        myLinkedList.add(0, 5);
+        myLinkedList.add(3, 7);
+        myLinkedList.add(myLinkedList.getSize(), 6);
 
-        linkedListImp.remove(2);
-        linkedListImp.set(linkedListImp.getSize(), 9);
-        linkedListImp.set(linkedListImp.getSize() - 1, 10);
+        myLinkedList.remove(2);
+        myLinkedList.set(myLinkedList.getSize(), 9);
+        myLinkedList.set(myLinkedList.getSize() - 1, 10);
 
 
-
-        Object o1 = linkedListImp.get(0);
-        Object o2 = linkedListImp.get(2);
-        Object o3 = linkedListImp.get(linkedListImp.getSize());
-        Object o4 = linkedListImp.get(linkedListImp.getSize() - 1);
+        Integer o1 = myLinkedList.get(0);
+        Integer o2 = myLinkedList.get(2);
+        Integer o3 = myLinkedList.get(myLinkedList.getSize());
+        Integer o4 = myLinkedList.get(myLinkedList.getSize() - 1);
         System.out.println(o1);
         System.out.println(o2);
         System.out.println(o3);

@@ -19,6 +19,7 @@ public class CustomerMQ {
         }
         linkedList.add(s);
         this.notifyAll();
+
     }
 
     public synchronized String get() throws InterruptedException {
