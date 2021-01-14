@@ -43,7 +43,7 @@ public class SerializeTest {
          * local class incompatible: stream classdesc serialVersionUID = -1057053695467362358, local class serialVersionUID = 8191924715493570484
          *
          *
-         * 实验 1  手动设置serialVersionUID字段的值，例如设置为1L：
+         * 实验 2  手动设置serialVersionUID字段的值，例如设置为1L：
          * 重复实现1的步骤
          *
          * 结果：反序列化成功

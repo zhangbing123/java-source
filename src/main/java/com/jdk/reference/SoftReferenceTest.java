@@ -6,7 +6,7 @@ import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 
 /**
- * @description: 弱引用测试
+ * @description: 软引用测试
  * @author: zhangbing
  * @create: 2020-08-07 10:56
  **/

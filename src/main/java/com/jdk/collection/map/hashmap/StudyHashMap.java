@@ -1,5 +1,10 @@
 package com.jdk.collection.map.hashmap;
 
+import java.util.HashMap;
+import java.util.Random;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
 /**
  * @description: HashMap源码解读
  * @author: zhangbing
@@ -60,21 +65,56 @@ public class StudyHashMap {
      */
     public static void main(String[] args) {
 
-//        Random random = new Random();
-//        HashMap<Object, String> hashMap = new HashMap<>();
-//        for (int i = 0; i < 100; i++) {
-//            int number = random.nextInt(62);
-//            hashMap.put(i, String.valueOf(number));
-//            hashMap.get(i);
-//            hashMap.size();
-//            System.out.println(hash(i));
-//        }
-//        //会产生hash冲突的key
-//        hashMap.put("Aa", "Aa");
-//        hashMap.put("BB", "BB");
-//
-//        System.out.println(hash("Aa"));
-//        System.out.println(hash("BB"));
+        Random random = new Random();
+        HashMap<Object, String> hashMap = new HashMap<>();
+        for (int i = 0; i < 100; i++) {
+            int number = random.nextInt(62);
+            hashMap.put(i, String.valueOf(number));
+            hashMap.get(i);
+            hashMap.size();
+            System.out.println(hash(i));
+        }
+        //会产生hash冲突的key
+        hashMap.put("Aa", "Aa");
+        hashMap.put("BB", "BB");
+
+        System.out.println(hash("Aa"));
+        System.out.println(hash("BB"));
+
+
+        /**
+         * 如果当前key 不存在  则新增key
+         * 如果当前key 已存在  则不做操作
+         */
+        hashMap.putIfAbsent("Aa", "12");
+
+        /**
+         * 当key已经存在 且对应的value！=null 则不做操作直接返回oldValue
+         * 当key已经存在 且对应的value == null 则用新值覆盖老值 返回newValue
+         * 当key不存在 新增
+         */
+        hashMap.computeIfAbsent("Aa", new Function<Object, String>() {
+            @Override
+            public String apply(Object o) {
+                return "123";
+            }
+        });
+
+        /**
+         *
+         * 当前key不存在的话 或者当前key对应的value为null 直接跳过 不做任何操作
+         * 当前key存在 并且value不为null：
+         * 1.新值不为null，覆盖老值
+         * 2.新值为null,移除老值
+         *
+         */
+        hashMap.computeIfPresent("Aa", new BiFunction<Object, String, String>() {
+            @Override
+            public String apply(Object o, String s) {
+                return null;
+            }
+        });
+
 
         /**
          * 下面所有的key都是定位到数组的同一个位置上 全部hash冲突
