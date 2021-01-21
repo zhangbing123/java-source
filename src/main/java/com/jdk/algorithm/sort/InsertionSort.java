@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.sort;
 
 /**
  * @description: 插入排序算法
@@ -10,6 +10,9 @@ public class InsertionSort {
     /**
      * 时间复杂度 O(n^2)
      * 适合数据量比较小的场景
+     * <p>
+     * 从第二个元素开始  与前一个比较   小的 就与前面元素调换位置，之后 在和前面一个元素比较
+     * 依次类推
      *
      * @param args
      */
@@ -45,7 +48,7 @@ public class InsertionSort {
                 if (array[j] > tmp) {
                     array[j + 1] = array[j];
                     array[j] = tmp;
-                }else {
+                } else {
                     break;
                 }
             }

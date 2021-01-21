@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.sort;
 
 /**
  * @description: 选择排序
@@ -11,8 +11,8 @@ public class SelectSort {
      * 时间复杂度O(n^2)
      * 以第一个元素为基准 (最小)
      * 遍历后面的元素  与第一个比较  选择最小的  放在对比的位置
-     *
-     * 然后在以第二个元素为基准  一次类推
+     * <p>
+     * 然后在以第二个元素为基准  依次类推
      *
      * @param args
      */
