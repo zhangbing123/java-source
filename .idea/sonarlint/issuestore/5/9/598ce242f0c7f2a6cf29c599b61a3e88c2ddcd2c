@@ -1,0 +1,18 @@
+
+u	java:S135C"YReduce the total number of break and continue statements in this loop to use at most one.(ι„Ι8¶Ψ«ύο.
+t
+java:S37763"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(ΛϊΜώÿÿÿÿ8¶Ψ«ύο.
+R
+java:S1481"/Remove this unused "kthElement" local variable.(ά¤όΐόÿÿÿÿ8¶Ψ«ύο.
+B
+java:S1659™"$Declare "index2" on a separate line.(Νιά8¶Ψ«ύο.
+G
+java:S1659w"%Declare "length2" on a separate line.( ψβΎψÿÿÿÿ8¶Ψ«ύο.
+I
+java:S1659~"'Declare "midIndex2" on a separate line.(¤€Ώόÿÿÿÿ8¶Ψ«ύο.
+B
+java:S1659¬"$Declare "pivot2" on a separate line.(±½ςς8¶Ψ«ύο.
+U
+java:S11978"8Move the array designator from the variable to the type.(Βΰ8¶Ψ«ύο.
+H
+java:S1659"%Declare "length2" on a separate line.( ψβΎψÿÿÿÿ8¶Ψ«ύο.

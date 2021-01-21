@@ -1,0 +1,4 @@
+
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Îˆ¨ÿùÿÿÿÿ
+„squid:UselessImportCheck"TRemove this unnecessary import: same package classes are always implicitly imported.(ÁÜñöûÿÿÿÿ8íÿ˜‹Û.
+Nsquid:S1481"0Remove this unused "deriveClass" local variable.(·Úù…8Ä÷þ†Ò.

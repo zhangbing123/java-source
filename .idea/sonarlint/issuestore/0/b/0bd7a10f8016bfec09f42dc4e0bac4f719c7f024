@@ -1,0 +1,21 @@
+
+osquid:ModifiersOrderCheckf"EReorder the modifiers to comply with the Java Language Specification.(²áÍÑþÿÿÿÿ
+gsquid:CommentedOutCodeLine6"<This block of commented-out lines of code should be removed.(ÿ”Ï‹ýÿÿÿÿ
+bsquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(ò‚ÙÎ
+]squid:S2142j"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+?squid:S1148k"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+isquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(ƒˆÒª8ö­†±À.
+gsquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ð˜üúÿÿÿÿ
+nsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(ð¨ÛÁýÿÿÿÿ8ö­†±À.
+isquid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(ã×¨…8ö­†±À.
+gsquid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(ËÂ¥œüÿÿÿÿ
+gsquid:CommentedOutCodeLine]"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+@squid:S1068>")Remove this unused "count" private field.(·Ô˜©
+Csquid:S1068B"'Remove this unused "age" private field.(Æ†´¦þÿÿÿÿ
+bsquid:CommentedOutCodeLine["<This block of commented-out lines of code should be removed.(ÇÏÃò
+Ssquid:S2209"5Change this instance-reference to a static reference.(û¾ƒ¤8ßƒŠ±À.
+nsquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ý•¦éúÿÿÿÿ8ö­†±À.
+_squid:S2276i"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(»ãßºøÿÿÿÿ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ð˜üúÿÿÿÿ
+isquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(ã×¨…8ö­†±À.

@@ -1,0 +1,10 @@
+
+dsquid:S2142Q"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ï·’«æ.
+Fsquid:S1148""#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8í¹‘«æ.
+Fsquid:S1148R"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ï·’«æ.
+Fsquid:S11481"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ä””«æ.
+Msquid:S00108B")Either remove or fill this block of code.(˜ïˆžÿÿÿÿÿ8ï·’«æ.
+dsquid:S2142!"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8í¹‘«æ.
+fsquid:S2276 "CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(»ãßºøÿÿÿÿ8í¹‘«æ.
+fsquid:S2276/"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(»ãßºøÿÿÿÿ8Ä””«æ.
+dsquid:S21420"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ä””«æ.

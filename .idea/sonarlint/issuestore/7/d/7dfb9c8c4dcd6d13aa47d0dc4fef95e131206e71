@@ -1,0 +1,6 @@
+
+Gsquid:S1068")Remove this unused "state" private field.(‘Ş†Î8µ½ãÆÂ.
+Ssquid:S1191"5Use classes from the Java API instead of Sun classes.(éª‚€8µ½ãÆÂ.
+dsquid:S2142V"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÿøÆÂ.
+Msquid:S00108 ")Either remove or fill this block of code.(µØ¯®øÿÿÿÿ8µ½ãÆÂ.
+Fsquid:S1148W"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÿøÆÂ.

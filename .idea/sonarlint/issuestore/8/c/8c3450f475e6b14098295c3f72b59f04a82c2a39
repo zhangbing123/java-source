@@ -1,0 +1,7 @@
+
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(îõ©µ8É×³ûï.
+q
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Íåü8É×³ûï.
+Z
+java:S1128"8Remove this unused import 'java.lang.ref.WeakReference'.(å¢Œıÿÿÿÿÿ8É×³ûï.

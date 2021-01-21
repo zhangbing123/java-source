@@ -1,0 +1,8 @@
+
+Zsquid:S2259@"CA "NullPointerException" could be thrown; "bytes" is nullable here.(‚”µ»
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îÎÎ˜ÿÿÿÿÿ
+?squid:S1148b"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148N"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+[squid:S2147P"DCombine this catch with the one at line 77, which has the same body.(ï­£Ä
+?squid:S1148Q"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+asquid:S2674K"JCheck the return value of the "read" call to see how many bytes were read.(®Ê¦š

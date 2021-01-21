@@ -1,0 +1,126 @@
+
+=squid:S1948?"'Make "items" transient or serializable.(ÇüÊS
+csquid:CommentedOutCodeLine‡
+"<This block of commented-out lines of code should be removed.(¨¹Ã«
+_squid:HiddenFieldCheck«"<Rename "putIndex" which hides the field declared at line 75.(áÅäù
+`squid:HiddenFieldCheck†
+">Rename "lastItem" which hides the field declared at line 1054.(í˜À
+… squid:ForLoopCounterChangedCheck·"XRefactor the code in order to not assign to this loop counter from within the loop body.(ïí±Ï
+`squid:HiddenFieldCheckØ
+"=Rename "lastRet" which hides the field declared at line 1059.(ÔèŽ˜
+`squid:HiddenFieldCheck‹"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+`squid:HiddenFieldCheckú"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+hsquid:CommentedOutCodeLineí	"<This block of commented-out lines of code should be removed.(¦ªÒÌúÿÿÿÿ
+hsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+jsquid:S3776½
+"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(±—àà
+?squid:S1185ª"(Remove this method to simply inherit it.(åž{
+`squid:HiddenFieldCheckå"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+… squid:ForLoopCounterChangedCheck™"XRefactor the code in order to not assign to this loop counter from within the loop body.(Þ¼Þ¢
+`squid:HiddenFieldCheck¸"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+\squid:HiddenFieldCheck»"9Rename "count" which hides the field declared at line 81.(ÙÍƒƒ
+Xsquid:S2184	"@Cast one of the operands of this addition operation to a "long".(ó¯Úˆ
+_squid:HiddenFieldCheckš"<Rename "putIndex" which hides the field declared at line 75.(áÅäù
+\squid:HiddenFieldCheckï"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+dsquid:HiddenFieldCheckÍ
+"<Rename "cursor" which hides the field declared at line 1039.(’â“¼øÿÿÿÿ
+… squid:ForLoopCounterChangedCheckÒ"XRefactor the code in order to not assign to this loop counter from within the loop body.(ïí±Ï
+fsquid:HiddenFieldCheck‰	"CRename "prevTakeIndex" which hides the field declared at line 1064.(¢ÃéÇ
+`squid:HiddenFieldCheckû	"8Rename "lock" which hides the field declared at line 92.(©¢Œôÿÿÿÿÿ
+hsquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+_squid:HiddenFieldCheckú"<Rename "putIndex" which hides the field declared at line 75.(áÅäù
+hsquid:CommentedOutCodeLineË	"<This block of commented-out lines of code should be removed.(ïŸ‚–øÿÿÿÿ
+hsquid:CommentedOutCodeLineú	"<This block of commented-out lines of code should be removed.(Ž±üÏøÿÿÿÿ
+hsquid:CommentedOutCodeLineæ"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+<squid:S1659ê"Declare "p" on a separate line.(¾¢»¯øÿÿÿÿ
+\squid:HiddenFieldCheck•"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+`squid:HiddenFieldCheck "8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+esquid:HiddenFieldCheckÃ
+"=Rename "takeIndex" which hides the field declared at line 69.(ÌÝƒ¸ÿÿÿÿÿ
+csquid:HiddenFieldCheckˆ	"@Rename "prevCycles" which hides the field declared at line 1069.(ÞÊÒÞ
+csquid:CommentedOutCodeLineÎ	"<This block of commented-out lines of code should be removed.(…Äª
+hsquid:CommentedOutCodeLineÖ	"<This block of commented-out lines of code should be removed.(¡ÁÐçøÿÿÿÿ
+\squid:HiddenFieldCheck"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+hsquid:CommentedOutCodeLine–
+"<This block of commented-out lines of code should be removed.(Ì®ýÒúÿÿÿÿ
+Fsquid:S1948b"*Make "notEmpty" transient or serializable.(›ÿšÛüÿÿÿÿ
+hsquid:CommentedOutCodeLineô
+"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+_squid:HiddenFieldCheckÅ"<Rename "putIndex" which hides the field declared at line 75.(áÅäù
+\squid:HiddenFieldCheck¥"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+hsquid:CommentedOutCodeLine¬	"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+csquid:CommentedOutCodeLineŠ"<This block of commented-out lines of code should be removed.(¼Øª°
+hsquid:CommentedOutCodeLineñ"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(òß¿•üÿÿÿÿ
+Š squid:ForLoopCounterChangedCheck˜"XRefactor the code in order to not assign to this loop counter from within the loop body.(‰çð‡ýÿÿÿÿ
+csquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(¦ãö
+„ squid:ForLoopCounterChangedCheckÔ"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ú»ò
+`squid:HiddenFieldCheckö"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+csquid:CommentedOutCodeLineÒ	"<This block of commented-out lines of code should be removed.(¨¹Ã«
+@squid:S1948h")Make "notFull" transient or serializable.(ùÜ‘Ë
+\squid:HiddenFieldCheck“"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+csquid:CommentedOutCodeLineÌ
+"<This block of commented-out lines of code should be removed.(Ó¿ô
+hsquid:CommentedOutCodeLineµ"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+csquid:CommentedOutCodeLineÊ"<This block of commented-out lines of code should be removed.(šéÓÁ
+Wsquid:S1161ù	":Add the "@Override" annotation above this method signature(¦³üëûÿÿÿÿ
+csquid:HiddenFieldCheckÄ
+"@Rename "prevCycles" which hides the field declared at line 1069.(ÞÊÒÞ
+csquid:CommentedOutCodeLineÔ
+"<This block of commented-out lines of code should be removed.(Ý¸˜ö
+hsquid:CommentedOutCodeLineÀ"<This block of commented-out lines of code should be removed.(Ž±üÏøÿÿÿÿ
+bsquid:HiddenFieldCheckà
+"?Rename "nextIndex" which hides the field declared at line 1049.(å‹¦˜
+„ squid:ForLoopCounterChangedCheck¹"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ú»ò
+csquid:CommentedOutCodeLine¯"<This block of commented-out lines of code should be removed.(šéÓÁ
+`squid:HiddenFieldCheck¯"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+hsquid:CommentedOutCodeLineÞ	"<This block of commented-out lines of code should be removed.(Ž±üÏøÿÿÿÿ
+hsquid:CommentedOutCodeLine¨"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+csquid:CommentedOutCodeLine²	"<This block of commented-out lines of code should be removed.(ŽÖ§·
+`squid:HiddenFieldCheckÎ"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+`squid:HiddenFieldCheckÙ"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+\squid:HiddenFieldCheckõ"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+Esquid:S2387À"-"next" is the name of a field in "Reference".(ôÐ¾Â
+hsquid:CommentedOutCodeLine¾
+"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+`squid:HiddenFieldCheckÈ	"8Rename "lock" which hides the field declared at line 92.(©¢Œôÿÿÿÿÿ
+_$squid:AssignmentInSubExpressionCheckÍ".Extract the assignment out of this expression.(˜„Ø¼
+Ysquid:S2209Ï"5Change this instance-reference to a static reference.(×ê¯£þÿÿÿÿ8Áà¹ÕÀ.
+`squid:HiddenFieldCheck¦"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+hsquid:CommentedOutCodeLinež"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+hsquid:CommentedOutCodeLineá"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+isquid:S3776´"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÒÝ“
+`squid:HiddenFieldCheckˆ"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+hsquid:CommentedOutCodeLineç"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+`squid:HiddenFieldCheckÂ"8Rename "lock" which hides the field declared at line 92.(©¢Œôÿÿÿÿÿ
+hsquid:CommentedOutCodeLineá"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+hsquid:CommentedOutCodeLine	"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+esquid:HiddenFieldCheckË"=Rename "takeIndex" which hides the field declared at line 69.(ÌÝƒ¸ÿÿÿÿÿ
+hsquid:CommentedOutCodeLineÀ	"<This block of commented-out lines of code should be removed.(Ž±üÏøÿÿÿÿ
+`squid:HiddenFieldCheck"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+osquid:S3776æ"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(íàìúÿÿÿÿ
+„ squid:ForLoopCounterChangedCheckÌ"XRefactor the code in order to not assign to this loop counter from within the loop body.(‚Ë§
+hsquid:CommentedOutCodeLine¢
+"<This block of commented-out lines of code should be removed.(ªí—Ãøÿÿÿÿ
+hsquid:CommentedOutCodeLineÖ"<This block of commented-out lines of code should be removed.(ëáì†þÿÿÿÿ
+\squid:HiddenFieldCheckó"9Rename "count" which hides the field declared at line 81.(ÙÍƒƒ
+Rsquid:S1161‡":Add the "@Override" annotation above this method signature(Á»›ê
+fsquid:HiddenFieldCheckÅ
+"CRename "prevTakeIndex" which hides the field declared at line 1064.(¢ÃéÇ
+d$squid:AssignmentInSubExpressionCheckì	".Extract the assignment out of this expression.(¯§–÷ÿÿÿÿÿ
+`squid:HiddenFieldCheckÁ"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+esquid:HiddenFieldCheck‡	"=Rename "takeIndex" which hides the field declared at line 69.(ÌÝƒ¸ÿÿÿÿÿ
+`squid:HiddenFieldCheckð"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+\squid:HiddenFieldCheckÔ"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+\squid:HiddenFieldCheck¢"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+\squid:HiddenFieldCheck¸"9Rename "items" which hides the field declared at line 63.(Ñ«Âß
+hsquid:CommentedOutCodeLineç	"<This block of commented-out lines of code should be removed.(÷ÿ¦ïýÿÿÿÿ
+dsquid:HiddenFieldCheckê	"<Rename "cursor" which hides the field declared at line 1039.(çÏÒÞûÿÿÿÿ
+dsquid:HiddenFieldCheckë"<Rename "sweeper" which hides the field declared at line 853.(ÔîÚ»ûÿÿÿÿ
+`squid:HiddenFieldCheck–"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+Wsquid:S1161œ":Add the "@Override" annotation above this method signature(ª÷‚µøÿÿÿÿ
+`squid:HiddenFieldCheckâ	"8Rename "lock" which hides the field declared at line 92.(©¢Œôÿÿÿÿÿ
+esquid:HiddenFieldCheck€
+"=Rename "lastRet" which hides the field declared at line 1059.(Ã¡ù„ÿÿÿÿÿ
+`squid:HiddenFieldCheck¶"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ
+`squid:HiddenFieldCheckÕ"8Rename "lock" which hides the field declared at line 92.(üçñ‘þÿÿÿÿ

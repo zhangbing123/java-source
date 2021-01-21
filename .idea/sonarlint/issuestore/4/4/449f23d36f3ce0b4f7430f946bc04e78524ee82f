@@ -1,0 +1,15 @@
+
+]squid:S21425"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+Qsquid:S2209Q"5Change this instance-reference to a static reference.(éÄä©ıÿÿÿÿ
+Asquid:S00108S")Either remove or fill this block of code.(ä ¹€
+Gsquid:S00108‡")Either remove or fill this block of code.(µØ¯®øÿÿÿÿ
+]squid:S2142S"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+Lsquid:S1191"5Use classes from the Java API instead of Sun classes.(éª‚€
+^squid:S2142•"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+Vsquid:S1068":Remove this unused "atomicStampedReference" private field.(´É‚İøÿÿÿÿ
+?squid:S11486"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+}squid:S1192K"fDefine a constant instead of duplicating this literal "ä¿®æ”¹å‰ï¼Œè¯»å–çš„å­¦ç”Ÿåç§°ä¸º:" 4 times.(‹§èÊ
+Bsquid:S00108•")Either remove or fill this block of code.(ä ¹€
+Rsquid:S2209“"5Change this instance-reference to a static reference.(éÄä©ıÿÿÿÿ
+Qsquid:S22094"5Change this instance-reference to a static reference.(ˆñ…‘üÿÿÿÿ
+}squid:S1192Y"fDefine a constant instead of duplicating this literal "ä¿®æ”¹åï¼Œè¯»å–çš„å­¦ç”Ÿåç§°ä¸º:" 4 times.(üíï¸

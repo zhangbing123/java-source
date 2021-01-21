@@ -1,0 +1,12 @@
+
+qsquid:S2293Ù"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚÁ£š
+_squid:S00112º"FDefine and throw a dedicated exception instead of using a generic one.(¢ãóß
+jsquid:S00117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å³ºÿ
+Vsquid:S2130ê"9Use "Integer.parseInt" for this string-to-int conversion.(€¡ıÿÿÿÿ
+@squid:S1148å"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+ssquid:S1192Ş"VUse already-defined constant 'DATE_FORMAT_DATE' instead of duplicating its value here.(ä‰®¥ùÿÿÿÿ
+osquid:CommentedOutCodeLine¶"<This block of commented-out lines of code should be removed.(ä·Ó³úÿÿÿÿ8‡ÃÃ§Â.
+hsquid:CommentedOutCodeLineZ"<This block of commented-out lines of code should be removed.(ôöö18‡°Ä§Â.
+@squid:S1148Ê"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Qsquid:S2130é"9Use "Integer.parseInt" for this string-to-int conversion.(é©ô£
+jsquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(»›Ñ‘8®åÃ§Â.

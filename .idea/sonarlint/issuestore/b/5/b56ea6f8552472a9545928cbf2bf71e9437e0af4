@@ -1,0 +1,6 @@
+
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(г╣М▒8╪░╫ую.
+dsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(Д═╧─8┴Ж╞сю.
+Hsquid:S00108,")Either remove or fill this block of code.(Д═╧─8┴Ж╞сю.
+dsquid:S2142,"FEither re-interrupt this method or rethrow the "InterruptedException".(Д═╧─8┴Ж╞сю.
+Fsquid:S1148"#Use a logger to log this exception.(─ит┘ЩЪЪЪЪ8┴Ж╞сю.

@@ -1,0 +1,15 @@
+
+Ssquid:S1191"5Use classes from the Java API instead of Sun classes.(éª‚€8õ´Œ”Ä.
+esquid:UselessImportCheck":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8£§œÄ.
+asquid:S3518T"CMake sure this expression can't be zero before doing this division.(€Şˆ€8¹•ËÄ.
+Fsquid:S1148R"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬ú­Ä.
+Lsquid:S1481")Remove this unused "date" local variable.(‘ğ•Ôúÿÿÿÿ8²áÌÄ.
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8£§œÄ.
+Xsquid:S2209P"5Change this instance-reference to a static reference.(Õá‚˜ÿÿÿÿÿ8¬ú­Ä.
+®%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78ş«‡ºÄ.
+dsquid:S2142Q"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¬ú­Ä.
+Wsquid:UselessImportCheck",Remove this unused import 'sun.misc.Unsafe'.(éª‚€8£§œÄ.
+usquid:UselessImportCheck	"ERemove this unused import 'java.util.concurrent.LinkedBlockingDeque'.(ÌÇœüÿÿÿÿ8£§œÄ.
+esquid:UselessImportCheck":Remove this unused import 'com.jdk.unsafe.UnsafeInstance'.(Æ¸½8£§œÄ.
+osquid:UselessImportCheck
+"DRemove this unused import 'java.util.concurrent.ThreadPoolExecutor'.(¦ÿöÊ8£§œÄ.

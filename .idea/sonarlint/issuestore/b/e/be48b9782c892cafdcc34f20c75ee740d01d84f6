@@ -1,0 +1,6 @@
+
+Dsquid:S1068
+"&Remove this unused "d1" private field.(¬ŞÔ«8Úšı†Ò.
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Îˆ¨ÿùÿÿÿÿ
+Isquid:S1068"&Remove this unused "d2" private field.(ı…úûÿÿÿÿ8Úšı†Ò.
+|squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8Úšı†Ò.

@@ -1,0 +1,9 @@
+
+]squid:S2142>"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+Asquid:S001087")Either remove or fill this block of code.(ä ¹€
+Psquid:S1481"2Remove this unused "cyclicBarrier" local variable.(Ü‘þž8ùêÅ«À.
+W
+squid:S899":Do something with the "boolean" value returned by "await".(‡žÂä8â³Ï«À.
+Qsquid:S2209="5Change this instance-reference to a static reference.(éÄä©ýÿÿÿÿ
+?squid:S1148?"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+]squid:S21427"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€

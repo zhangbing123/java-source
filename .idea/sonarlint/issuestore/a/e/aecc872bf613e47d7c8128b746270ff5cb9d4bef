@@ -1,0 +1,8 @@
+
+_squid:S00112—"FDefine and throw a dedicated exception instead of using a generic one.(‡Êà–
+Wsquid:S1161":Add the "@Override" annotation above this method signature(ÊÇ¼…üÿÿÿÿ
+Qsquid:S1161ø":Add the "@Override" annotation above this method signature(•Ü)
+Qsquid:S1161ß":Add the "@Override" annotation above this method signature(•Ü)
+_squid:S00112‰"FDefine and throw a dedicated exception instead of using a generic one.(‡Êà–
+gsquid:S1192Ñ"JDefine a constant instead of duplicating this literal "not owner" 3 times.(¶¼‰õûÿÿÿÿ
+Rsquid:S1161¬":Add the "@Override" annotation above this method signature(¯şš×

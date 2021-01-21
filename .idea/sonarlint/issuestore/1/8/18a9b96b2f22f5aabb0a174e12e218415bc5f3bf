@@ -1,0 +1,7 @@
+
+dsquid:S2142*"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Í¬©‹Ò.
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Í¬©‹Ò.
+Lsquid:S1905"")Remove this unnecessary cast to "String".(Ìİ“¦ıÿÿÿÿ8¾ª‹Ò.
+dsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Í¬©‹Ò.
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Çµí‘8Í¬©‹Ò.
+Hsquid:S00108*")Either remove or fill this block of code.(ä ¹€8Í¬©‹Ò.

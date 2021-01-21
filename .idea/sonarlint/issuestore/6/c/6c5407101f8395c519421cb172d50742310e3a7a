@@ -1,0 +1,21 @@
+
+vsquid:ModifiersOrderCheck!"EReorder the modifiers to comply with the Java Language Specification.(Œ±Ÿÿÿÿÿÿ8÷İŒÂ¼.
+Ksquid:S1068"(Remove this unused "lock" private field.(¿Óê¨úÿÿÿÿ8øª†Á¼.
+=squid:S1659 "Declare "y" on a separate line.(úğ8Í¸ôÁ¼.
+Usquid:S2589B"7Remove this expression which always evaluates to "true"(š‘Öï8´ãÂ¼.
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ûÿ®‘ûÿÿÿÿ8ã°ïÀ¼.
+nsquid:S1450 "PRemove the "y" field and declare it as a local variable in the relevant methods.(úğ8ÚÌöÁ¼.
+Bsquid:S1659!"Declare "b" on a separate line.(Œ±Ÿÿÿÿÿÿ8Í¸ôÁ¼.
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Î‘ÊÎÿÿÿÿÿ8œ©–Á¼.
+Fsquid:S1148>"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ì²ıÁ¼.
+ssquid:S1450!"PRemove the "b" field and declare it as a local variable in the relevant methods.(Œ±Ÿÿÿÿÿÿ8ÚÌöÁ¼.
+ssquid:S1450!"PRemove the "a" field and declare it as a local variable in the relevant methods.(Œ±Ÿÿÿÿÿÿ8ÚÌöÁ¼.
+esquid:S2142ƒ"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ì²ıÁ¼.
+^squid:UnusedPrivateMethodn"2Remove this unused private "testAtomicity" method.(âôÆ¢8Ì²ıÁ¼.
+dsquid:S2142="FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ì²ıÁ¼.
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ìàÿÿÿÿÿ8ø§Á¼.
+Usquid:S2589B"7Remove this expression which always evaluates to "true"(š‘Öï8´ãÂ¼.
+nsquid:S1450 "PRemove the "x" field and declare it as a local variable in the relevant methods.(úğ8É»öÁ¼.
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ÔŒŒùÿÿÿÿ8š¨˜Á¼.
+_squid:UnusedPrivateMethodY"3Remove this unused private "testVisibility" method.(Ø˜ŞÃ8Ì²ıÁ¼.
+Gsquid:S1148„"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ì²ıÁ¼.

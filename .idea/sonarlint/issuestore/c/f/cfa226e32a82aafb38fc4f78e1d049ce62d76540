@@ -1,0 +1,10 @@
+
+Ssquid:S2209"5Change this instance-reference to a static reference.(‹Ý¶Û8“ŽÊ¯æ.
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8“ŽÊ¯æ.
+dsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8“ŽÊ¯æ.
+Ssquid:S22099"5Change this instance-reference to a static reference.(‹Ý¶Û8“ŽÊ¯æ.
+dsquid:S2142:"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8“ŽÊ¯æ.
+Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8“ŽÊ¯æ.
+Fsquid:S1148;"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8“ŽÊ¯æ.
+Ssquid:S2209)"5Change this instance-reference to a static reference.(‹Ý¶Û8“ŽÊ¯æ.
+dsquid:S2142*"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8“ŽÊ¯æ.

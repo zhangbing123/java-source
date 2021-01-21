@@ -1,0 +1,6 @@
+
+Lsquid:S1191"5Use classes from the Java API instead of Sun classes.(éª‚€
+Qsquid:S22091"5Change this instance-reference to a static reference.(ˆñ…‘üÿÿÿÿ
+?squid:S1148f"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Qsquid:S1161W":Add the "@Override" annotation above this method signature(“–ýþ
+Qsquid:S1161s":Add the "@Override" annotation above this method signature(“–ýþ

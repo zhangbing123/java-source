@@ -1,0 +1,17 @@
+
+c
+java:S2142*"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÍÅ”ûï.
+e
+java:S2276)"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(éÄä©ıÿÿÿÿ8ÍÅ”ûï.
+W
+java:S2209)"5Change this instance-reference to a static reference.(éÄä©ıÿÿÿÿ8ÍÅ”ûï.
+b
+java:S11248"EReorder the modifiers to comply with the Java Language Specification.(ŸÍ¢8ÍÅ”ûï.
+c
+java:S2142="FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÍÅ”ûï.
+e
+java:S2276<"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(ˆñ…‘üÿÿÿÿ8ÍÅ”ûï.
+W
+java:S2209<"5Change this instance-reference to a static reference.(ˆñ…‘üÿÿÿÿ8ÍÅ”ûï.
+M
+java:S1144C"0Remove this unused private "testPrivate" method.(ÃØä±8ÍÅ”ûï.
