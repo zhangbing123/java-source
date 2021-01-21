@@ -20,6 +20,7 @@ public class BinaryTree {
         middleOrder(node);
 
         System.out.println("=========后序=========");
+        postOrder(node);
 
         System.out.println("==========每层从左向右遍历==============");
         Queue<Node> queue = new LinkedList<>();
@@ -40,6 +41,15 @@ public class BinaryTree {
 
 
     }
+
+    private static void postOrder(Node node) {
+        if (node==null) return;
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.val);
+    }
+
 
     private static void middleOrder(Node node) {
         if (node==null){
