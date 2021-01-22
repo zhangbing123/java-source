@@ -1,3 +1,7 @@
 
-Zsquid:S3655<"7Call "Optional#isPresent()" before accessing the value.(–£¶—ÿÿÿÿÿ8˜ıÒèÍ.
-Zsquid:S1155"">Use isEmpty() to check whether the collection is empty or not.(ĞàÏØüÿÿÿÿ
+y
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ØÈÕ×ÿÿÿÿÿ8Ãõ´¢ò.
+`
+java:S1155"">Use isEmpty() to check whether the collection is empty or not.(ĞàÏØüÿÿÿÿ8Ãõ´¢ò.
+Y
+java:S3655<"7Call "Optional#isPresent()" before accessing the value.(–£¶—ÿÿÿÿÿ8Ãõ´¢ò.

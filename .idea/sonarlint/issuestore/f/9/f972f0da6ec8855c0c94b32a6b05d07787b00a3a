@@ -1,2 +1,5 @@
 
-asquid:S1155$">Use isEmpty() to check whether the collection is empty or not.(ĞàÏØüÿÿÿÿ8Õ÷ÕåÍ.
+`
+java:S1155$">Use isEmpty() to check whether the collection is empty or not.(ĞàÏØüÿÿÿÿ8„Û´¢ò.
+y
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ØÈÕ×ÿÿÿÿÿ8„Û´¢ò.

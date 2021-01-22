@@ -1,5 +1,9 @@
 
-2squid:S3626C"Remove this redundant jump.(ÉŠ©ƒ
-nsquid:S3776""RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(öÅÇ¦üÿÿÿÿ
-Ssquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ
-Zsquid:S11551">Use isEmpty() to check whether the collection is empty or not.(ùÅ§İÿÿÿÿÿ
+`
+java:S11551">Use isEmpty() to check whether the collection is empty or not.(ùÅ§İÿÿÿÿÿ8öÆ»Èò.
+L
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8öÆ»Èò.
+8
+java:S3626C"Remove this redundant jump.(ÉŠ©ƒ8öÆ»Èò.
+t
+java:S3776""RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(öÅÇ¦üÿÿÿÿ8öÆ»Èò.
