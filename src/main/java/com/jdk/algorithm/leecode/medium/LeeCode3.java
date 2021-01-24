@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.leecode.medium;
 
 /**
  * @Description: 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度
@@ -22,7 +22,7 @@ package com.jdk.algorithm;
  * @Author: zhangbing
  * @CreateDate: 2020/10/17 10:29 PM
  */
-public class NoRepeatCharLength {
+public class LeeCode3 {
 
     public static void main(String[] args) {
 

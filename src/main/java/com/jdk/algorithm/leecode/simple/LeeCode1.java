@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.leecode.simple;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,15 +19,28 @@ import java.util.Set;
  * @author: zhangbing
  * @create: 2020-06-12 09:53
  **/
-public class TestAlgorithm {
+public class LeeCode1 {
 
     public static void main(String[] args) {
-        int [] nums = {3, 3, 11, 15};
-        int target = 9;
-        int[] ints = twoSum(nums, target);
-        for (int anInt : ints) {
-            System.out.printf(""+anInt);
+        int [][] numArr = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}};
+
+        for (int[] ints : numArr) {
+            for (int anInt : ints) {
+                System.out.println(anInt);
+            }
+
         }
+
+//
+//        int [] nums = {3, 3, 11, 15};
+//        int target = 9;
+//        int[] ints = twoSum(nums, target);
+//        for (int anInt : ints) {
+//            System.out.printf(""+anInt);
+//        }
 
 
     }

@@ -1,11 +1,11 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.leecode.simple;
 
 /**
  * @description: 整数翻转  简单  力扣 7题
  * @author: zhangbing
  * @create: 2021-01-22 15:47
  **/
-public class ZhengShuFanZhuan7 {
+public class LeeCode7 {
 
     public static void main(String[] args) {
 

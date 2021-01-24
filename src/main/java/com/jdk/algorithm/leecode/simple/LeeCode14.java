@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.leecode.simple;
 
 /**
  * @description: 最长公共前缀

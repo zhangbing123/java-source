@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.leecode.simple;
 
 import java.util.ArrayList;
 import java.util.HashMap;

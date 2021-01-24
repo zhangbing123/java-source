@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.leecode.difficulty;
 
 /**
  * @description: 找到两个数组的中位数
@@ -31,7 +31,7 @@ package com.jdk.algorithm;
  * @author: zhangbing
  * @create: 2020-07-07 11:38
  **/
-public class ArrayMedian {
+public class LeeCode4 {
 
     public static void main(String[] args) {
 

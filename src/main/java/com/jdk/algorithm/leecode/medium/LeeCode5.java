@@ -1,4 +1,4 @@
-package com.jdk.algorithm;
+package com.jdk.algorithm.leecode.medium;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,7 +22,7 @@ import java.util.Map;
  * @Author: zhangbing
  * @CreateDate: 2020/10/18 2:44 PM
  */
-public class Palindrome {
+public class LeeCode5 {
 
     public static void main(String[] args) {
         String str = "abcda";
